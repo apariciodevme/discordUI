@@ -1,5 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Bars3Icon, ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+
+import {
+  BsTwitter,
+  BsInstagram,
+  BsFacebook,
+  BsYoutube,
+  BsTiktok,
+} from "react-icons/bs";
 
 import { Passion_One } from "next/font/google";
 const passionOne = Passion_One({
@@ -39,7 +48,7 @@ export default function Home() {
         <nav className="flex items-center justify-between p-6">
           <Image
             src={"/discord-logo-white.png"}
-            width={130}
+            width={120}
             height={100}
             alt="logo"
           />
@@ -56,7 +65,7 @@ export default function Home() {
         {/*-------------------- Hero section --------------------*/}
 
         <section>
-          <div className="flex flex-col gap-6 p-6 mt-20">
+          <div className="flex flex-col gap-6 p-6 mt-12">
             <h1
               className={`text-5xl font-bold tracking-tight  uppercase ${passionOne.className}`}
             >
@@ -130,11 +139,95 @@ export default function Home() {
             />
 
             <div className="flex flex-col items-center justify-center w-full gap-12 starBg">
-            <h1 className="text-3xl font-bold text-neutral-800">Ready ro start your journey?</h1>
-            <button className="flex items-center justify-between gap-2 py-4 text-xl font-medium duration-200 bg-indigo-500 rounded-full px-36 text-neutral-50 hover:shadow-xl hover:bg-indigo-400 hover:shadow-neutral-400 ">
+              <h1 className="text-3xl font-bold text-neutral-800">
+                Ready to start your journey?
+              </h1>
+              <button className="flex items-center justify-between gap-2 py-4 mb-10 text-xl font-medium duration-200 bg-indigo-500 rounded-full px-36 text-neutral-50 hover:shadow-xl hover:bg-indigo-400 hover:shadow-neutral-400 ">
                 <ArrowDownTrayIcon className="w-6" />
                 Download for Mac
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/*-------------------- Footer section --------------------*/}
+
+        <section>
+          <div className="min-h-screen p-6 bg-neutral-900">
+            <div className="flex gap-6 text-neutral-200">
+              <BsTwitter size={22} />
+              <BsInstagram size={22} />
+              <BsFacebook size={22} />
+              <BsYoutube size={22} />
+              <BsTiktok size={22} />
+            </div>
+
+            {/*-------------------- Grid section --------------------*/}
+
+            <div className="grid grid-cols-2 grid-rows-3 gap-8 mt-20 ">
+              <div>
+                <h1 className="mb-6 text-indigo-500">Product</h1>
+                <div className="flex flex-col items-start gap-2 text-neutral-100">
+                  <Link href={"/"}>Download</Link>
+                  <Link href={"/"}>Nitro</Link>
+                  <Link href={"/"}>Status</Link>
+                </div>
+              </div>
+
+              <div>
+                <h1 className="mb-6 text-indigo-500">Company</h1>
+                <div className="flex flex-col items-start gap-2 text-neutral-100">
+                  <Link href={"/"}>About</Link>
+                  <Link href={"/"}>Jobs</Link>
+                  <Link href={"/"}>Brand</Link>
+                  <Link href={"/"}>Newsroom</Link>
+                </div>
+              </div>
+
+              <div className="row-span-2">
+                <h1 className="mb-6 text-indigo-500">Resources</h1>
+                <div className="flex flex-col items-start gap-2 text-neutral-100">
+                  <Link href={"/"}>College</Link>
+                  <Link href={"/"}>Support</Link>
+                  <Link href={"/"}>Safety</Link>
+                  <Link href={"/"}>Blog</Link>
+                  <Link href={"/"}>Feedback</Link>
+                  <Link href={"/"}>Build</Link>
+                  <Link href={"/"}>Streamkit</Link>
+                  <Link href={"/"}>Creators</Link>
+                  <Link href={"/"}>Community</Link>
+                  <Link href={"/"}>Official 3rd Party Merch</Link>
+                </div>
+              </div>
+              <div className="row-span-2">
+                <h1 className="mb-6 text-indigo-500">Policies</h1>
+                <div className="flex flex-col items-start gap-2 text-neutral-100">
+                  <Link href={"/"}>Terms</Link>
+                  <Link href={"/"}>Privacy</Link>
+                  <Link href={"/"}>Cookie Settings</Link>
+                  <Link href={"/"}>Guidelines</Link>
+                  <Link href={"/"}>Acknowledgements</Link>
+                  <Link href={"/"}>Licenses</Link>
+                  <Link href={"/"}>Moderation</Link>
+                  <Link href={"/"}>Company Information</Link>
+                </div>
+              </div>
+            </div>
+
+            {/*------------------End Grid----------------*/}
+
+            <div className="h-[0.8px] bg-indigo-500 w-full mt-10"></div>
+
+            <div className="flex items-center justify-between mt-10">
+              <Image
+                src={"/discord-logo-white.png"}
+                width={120}
+                height={100}
+                alt="logo"
+              />
+              <button className="px-3 py-2 text-sm font-semibold transition duration-200 bg-indigo-500 rounded-full text-neutral-50 hover:shadow-xl hover:bg-indigo-400 ">
+                Sign up
+              </button>{" "}
             </div>
           </div>
         </section>

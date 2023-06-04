@@ -173,8 +173,8 @@ export default function Home() {
         {/*-------------------- Footer section --------------------*/}
 
         <section>
-          <div className="min-h-screen p-6 bg-neutral-900">
-            <div className="flex gap-6 text-neutral-200">
+          <div className="min-h-screen p-6 bg-neutral-900 ">
+            <div className="flex gap-6 pt-20 text-neutral-200 lg:pb-20">
               <BsTwitter size={22} />
               <BsInstagram size={22} />
               <BsFacebook size={22} />

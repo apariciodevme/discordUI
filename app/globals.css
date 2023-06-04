@@ -9,7 +9,7 @@
 }
 
 
-body {
+.blueBg {
   background-color: var(--foreground-rgb);
  
 }
@@ -19,11 +19,13 @@ h1, h2, h3, h4, h5, p {
 }
 
 .imgBg {
-  background-image: url('../public/heroVertical.svg');
-  background-size: cover;
+  background-image: url('../public/mountains.svg');
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
 
 .starBg {
   background-image: url('../public/starPink.svg');

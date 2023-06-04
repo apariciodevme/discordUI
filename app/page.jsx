@@ -42,10 +42,10 @@ const infoSection = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between min-h-screen ">
+    <main className="flex flex-col ">
       <div>
         {/*-------------------- Navbar section --------------------*/}
-        <nav className="flex items-center justify-between p-6">
+        <nav className="flex items-center justify-between p-6 blueBg">
           <Image
             src={"/discord-logo-white.png"}
             width={120}
@@ -65,19 +65,19 @@ export default function Home() {
         {/*-------------------- Hero section --------------------*/}
 
         <section>
-          <div className="flex flex-col gap-6 p-6 mt-12">
+          <div className="flex flex-col gap-6 p-6 pt-12 blueBg lg:items-center lg:gap-8 imgBg">
             <h1
-              className={`text-5xl font-bold tracking-tight  uppercase ${passionOne.className}`}
+              className={`text-5xl lg:text-7xl font-bold tracking-normal  uppercase ${passionOne.className}`}
             >
               Imagine a place...
             </h1>
-            <p className="text-sm font-light leading-6">
+            <p className="text-sm font-light leading-6 lg:text-lg lg:mx-auto lg:w-3/5 lg:text-center">
               ...where you can belong to a school club, a gaming group, or a
               worldwide art community. Where just you and a handful of friends
               can spend time together. A place that makes it easy to talk every
               day and hang out more often.
             </p>
-            <div className="flex flex-col items-start gap-6 ">
+            <div className="flex flex-col items-start gap-6 lg:flex-row">
               <button className="flex items-center justify-between gap-2 px-8 py-3 text-xl font-medium duration-200 rounded-full bg-slate-100 text-slate-800 hover:text-blue-500 hover:shadow-2xl">
                 <ArrowDownTrayIcon className="w-6" />
                 Download for Mac
@@ -88,8 +88,8 @@ export default function Home() {
             </div>
             <Image
               src={"/heroVertical.svg"}
-              width={1000}
-              height={1000}
+              width={600}
+              height={600}
               alt="hero image"
             />
           </div>
@@ -98,9 +98,7 @@ export default function Home() {
         {/*-------------------- Info section --------------------*/}
 
         <section>
-          <div className="flex flex-col items-center gap-32 p-6 bg-neutral-200">
-            {/*---------- box ----------*/}
-
+          <div className="flex flex-col items-center gap-32 p-6 pb-20 lg:justify-center bg-neutral-200 lg:hidden">
             {infoSection.map((info) => (
               <div key={info.id} className="flex flex-col gap-12">
                 <img src={info.image} width={600} height={600} />
@@ -115,18 +113,40 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+        {/*-------------------- Info section XL --------------------*/}
+
+
+          <div className="flex-col items-center hidden gap-32 p-6 pt-20 lg:flex lg:justify-center bg-neutral-200">
+          {infoSection.map((info) => (
+              <div key={info.id} className="flex ">
+                <div className="flex flex-col items-start gap-6">
+                  <h1
+                    className={`text-3xl lg:text-4xl font-bold text-neutral-800 flex-wrap max-w-md ${passionOne.className}`}
+                  >
+                    {info.title}
+                  </h1>
+                  <p className="text-neutral-700 lg:w-96">{info.description}</p>
+                </div>
+                <img src={info.image} width={600} height={600} />
+
+              </div>
+            ))}
+          </div>
         </section>
 
-        {/*-------------------- Info section --------------------*/}
+
+
+
 
         <section>
-          <div className="flex flex-col items-start gap-6 p-6 bg-neutral-100 ">
+          <div className="flex flex-col items-start gap-6 p-6 lg:items-center bg-neutral-100 lg:pt-20 ">
             <h1
-              className={`text-4xl font-bold uppercase text-neutral-800 ${passionOne.className}`}
+              className={`text-4xl lg:text-6xl font-bold uppercase text-neutral-800 ${passionOne.className}`}
             >
               Reliable tech for staying close
             </h1>
-            <p className="text-sm text-neutral-700">
+            <p className="text-sm lg:text-lg text-neutral-700 lg:w-3/5 lg:text-center">
               Low-latency voice and video feels like you’re in the same room.
               Wave hello over video, watch friends stream their games, or gather
               up and have a drawing session with screen share.
@@ -139,7 +159,7 @@ export default function Home() {
             />
 
             <div className="flex flex-col items-center justify-center w-full gap-12 starBg">
-              <h1 className="text-3xl font-bold text-neutral-800">
+              <h1 className="text-3xl font-bold lg:text-4xl text-neutral-800">
                 Ready to start your journey?
               </h1>
               <button className="flex items-center justify-between gap-2 py-4 mb-10 text-xl font-medium duration-200 bg-indigo-500 rounded-full px-36 text-neutral-50 hover:shadow-xl hover:bg-indigo-400 hover:shadow-neutral-400 ">
@@ -164,7 +184,7 @@ export default function Home() {
 
             {/*-------------------- Grid section --------------------*/}
 
-            <div className="grid grid-cols-2 grid-rows-3 gap-8 mt-20 ">
+            <div className="grid grid-cols-2 grid-rows-3 gap-8 ">
               <div>
                 <h1 className="mb-6 text-indigo-500">Product</h1>
                 <div className="flex flex-col items-start gap-2 text-neutral-100">

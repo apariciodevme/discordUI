@@ -61,19 +61,19 @@ export default function Home() {
         {/*-------------------- Hero section --------------------*/}
 
         <section>
-          <div className="flex flex-col gap-6 p-6 pt-12 blueBg lg:items-center lg:gap-8 imgBg">
+          <div className="flex flex-col gap-6 p-6 pt-12 blueBg md:items-center md:gap-8 imgBg">
             <h1
-              className={`text-5xl lg:text-7xl font-bold tracking-normal  uppercase ${passionOne.className}`}
+              className={`text-5xl md:text-7xl font-bold tracking-normal  uppercase ${passionOne.className}`}
             >
               Imagine a place...
             </h1>
-            <p className="text-sm font-light leading-6 lg:text-lg lg:mx-auto lg:w-3/5 lg:text-center">
+            <p className="w-2/4 text-sm font-light leading-6 md:mx-auto md:text-lg md:w-3/5 md:text-center">
               ...where you can belong to a school club, a gaming group, or a
               worldwide art community. Where just you and a handful of friends
               can spend time together. A place that makes it easy to talk every
               day and hang out more often.
             </p>
-            <div className="flex flex-col items-start gap-6 lg:flex-row">
+            <div className="flex flex-col items-start gap-6 md:flex-row">
               <button className="flex items-center justify-between gap-2 px-8 py-3 text-xl font-medium duration-200 rounded-full bg-slate-100 text-slate-800 hover:text-blue-500 hover:shadow-2xl">
                 <ArrowDownTrayIcon className="w-6" />
                 Download for Mac
